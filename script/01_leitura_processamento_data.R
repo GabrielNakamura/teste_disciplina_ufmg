@@ -1,5 +1,6 @@
 # leitura de dado
 library(here)
+library(dplyr)
 
 
 # dado bruto 
@@ -16,3 +17,6 @@ write.csv(x = data_penguins_processed,
                             "processed",
                             "data_penguins_processed.csv")
           )
+
+filtereddata<-data_penguins_processed2%>%
+  filter(species=="Adelie")
