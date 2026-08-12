@@ -20,3 +20,9 @@ write.csv(x = data_penguins_processed,
 
 filtereddata<-data_penguins_processed2%>%
   filter(species=="Adelie")
+
+filtereddata2 <- 
+  data_penguins_processed2 |> 
+  filter(sex == "female")
+
+
