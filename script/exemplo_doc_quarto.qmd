@@ -1,0 +1,62 @@
+---
+title: "Exemplo de montagem"
+format: html
+editor: visual
+---
+
+# Cabeçalho principal
+
+## Subtitulo do titulo principal
+
+### ....
+
+## Quarto
+
+# Outro titulo
+
+# Introdução
+
+
+# Métodos
+
+
+
+## Modelos
+
+Dentro da seção de modelo que está dentro de métodos
+ [Vou colocar aqui um link](https://rpubs.com/drgregmartin/1266674)
+ 
+ 
+
+```{r echo=TRUE, eval=TRUE}
+#| label: exemplo
+soma_1_1 <- sum(1 + 1)
+soma_1_1
+plot(rnorm(10), rnorm(10))
+```
+
+Descrevendo os meu métodos e lembrei que quero falar da figura que está lá em cima @exemplo
+
+
+## Dados
+
+# Discussão
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
