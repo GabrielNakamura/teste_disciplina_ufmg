@@ -1,6 +1,7 @@
 # leitura de dado
 library(here)
 library(dplyr)
+library(ggplot2)
 
 
 # dado bruto 
@@ -18,5 +19,15 @@ write.csv(x = data_penguins_processed,
                             "data_penguins_processed.csv")
           )
 
-filtereddata<-data_penguins_processed2%>%
-  filter(species=="Adelie")
+data2<-data_penguins_processed2%>%
+  filter(bill_depth_mm!="NA")%>%
+  group_by(species)%>%
+  summarise(media=mean(bill_depth_mm))
+
+p1<-ggplot(data = data2, aes(x = species, y = media))+
+  geom_point()+theme_classic(base_size = 14)+
+  labs(x="Species", y= "Mean bill depth (mm)")
+
+
+p1  
+
