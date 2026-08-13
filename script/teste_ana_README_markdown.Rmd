@@ -1,0 +1,17 @@
+---
+title: "teste_ana_README"
+author: "Ana Souza"
+date: "2026-08-13"
+format: gfm
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+# README
+
+Testando como criar um README.gfm 
+
