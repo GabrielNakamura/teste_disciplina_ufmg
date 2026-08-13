@@ -1,0 +1,57 @@
+---
+title: "Quarto_Ana "
+format: html
+editor: visual
+---
+
+# 1. Título
+
+## 1.1. Subtítulo
+
+### 1.1.1. Subseção do subtítulo
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+Parâmetros:
+
+{linguagem = r nome do chunk = "teste_ana", echo = aparecer ou não o chunk eval = rodar ou não o eval}
+
+```{r}
+#| label: fig-teste-ana
+#| fig-cap: "Gráfico de dispersão entre X e Y."
+
+plot(rnorm(17), rnorm(17))
+```
+
+Chamando meu gráfico de novo @fig-teste-ana
+
+```{r fig-teste-ana2, echo=T, eval=T}
+#| fig-cap: "Gráfico de dispersão entre X e Y."
+
+plot(rnorm(34), rnorm(34))
+```
+
+Chamando meu gráfico de novo @fig-teste-ana2
+
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+```{r}
+#| eval: false
+2 * 2
+```
+
+The `eval: false` option disables the printing of output (only code is displayed).
