@@ -2,6 +2,7 @@
 title: "Exemplo de montagem"
 format: html
 editor: visual
+bibliography: bibliography_ciencia_aberta.bib
 ---
 
 # Cabeçalho principal
@@ -19,6 +20,7 @@ editor: visual
 
 # Métodos
 
+Exemplo de citação de uma referência @kowaltowskiOpenAccessBrazilian2022
 
 
 ## Modelos
@@ -60,3 +62,6 @@ You can add options to executable code like this
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
+
+
+

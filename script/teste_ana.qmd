@@ -2,6 +2,7 @@
 title: "Quarto_Ana "
 format: html
 editor: visual
+bibliography: ana_biblio.bib
 ---
 
 # 1. Título
@@ -39,7 +40,6 @@ plot(rnorm(34), rnorm(34))
 
 Chamando meu gráfico de novo @fig-teste-ana2
 
-
 You can add options to executable code like this
 
 ```{r}
@@ -48,6 +48,8 @@ You can add options to executable code like this
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
+
+Testando referência de outro arquivo @loyolaObsessionQuantityView2012
 
 ```{r}
 #| eval: false

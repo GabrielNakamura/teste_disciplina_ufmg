@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="exemplo_doc_quarto_files/libs/clipboard/clipboard.min.js"></script>
@@ -118,6 +138,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="métodos" class="level1">
 <h1>Métodos</h1>
+<p>Exemplo de citação de uma referência <span class="citation" data-cites="kowaltowskiOpenAccessBrazilian2022">Kowaltowski, Naslavsky, and Zatz (<a href="#ref-kowaltowskiOpenAccessBrazilian2022" role="doc-biblioref">2022</a>)</span></p>
 <section id="modelos" class="level2">
 <h2 class="anchored" data-anchor-id="modelos">Modelos</h2>
 <p>Dentro da seção de modelo que está dentro de métodos <a href="https://rpubs.com/drgregmartin/1266674">Vou colocar aqui um link</a></p>
@@ -136,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Descrevendo os meu métodos e lembrei que quero falar da figura que está lá em cima <span class="citation" data-cites="exemplo">@exemplo</span></p>
+<p>Descrevendo os meu métodos e lembrei que quero falar da figura que está lá em cima <span class="citation" data-cites="exemplo">(<a href="#ref-exemplo" role="doc-biblioref"><strong>exemplo?</strong></a>)</span></p>
 </section>
 <section id="dados" class="level2">
 <h2 class="anchored" data-anchor-id="dados">Dados</h2>
@@ -161,10 +182,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+
 </section>
 </section>
 
-</main>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-kowaltowskiOpenAccessBrazilian2022" class="csl-entry" role="listitem">
+Kowaltowski, Alicia, Michel Naslavsky, and Mayana Zatz. 2022. <span>“Open Access: <span>Brazilian</span> Scientists Denied Waivers and Discounts.”</span> <em>Nature</em> 603 (7903): 793–93. <a href="https://doi.org/10.1038/d41586-022-00864-3">https://doi.org/10.1038/d41586-022-00864-3</a>.
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
