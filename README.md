@@ -1,0 +1,7 @@
+
+
+# Repositório exemplo
+
+Esse repo contém os arquivos criados para fins didáticos e de
+demonstração em aula da disciplina de ciência aberta ministrada na UFMG
+PPG ECMVS
