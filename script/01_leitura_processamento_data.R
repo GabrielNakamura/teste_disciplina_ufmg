@@ -31,3 +31,15 @@ p1<-ggplot(data = data2, aes(x = species, y = media))+
 
 p1  
 
+#massa em funcao dos sexos dos pinguins
+data3<-data_penguins_processed2%>%
+  filter(body_mass_g!="NA")%>%
+  filter(sex!="NA")%>%
+  group_by(sex)%>%
+  summarise(media=mean(body_mass_g))
+
+p3<-ggplot(data = data3, aes(x = sex, y = media))+
+  geom_point()+theme_classic(base_size = 14)+
+  labs(x="Sex", y= "Mean body mass (g)")
+
+p3
