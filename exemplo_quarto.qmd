@@ -1,0 +1,44 @@
+---
+title: "Teste disciplina Reprodutibilidade Computacional"
+format: html
+editor: visual
+date: 2026-08-13
+theme: journal
+---
+
+# Cabeçalho principal: Meu primeiro quarto
+
+## Subtitítulo 1: Carregando meus dados de pinguins
+
+Neste exemplo, estamos criando um arquivo **html** usando quarto. Para isso estamos usando os dados do pacote palmerpenguins. Além disso, removemos as linhas com NA.
+
+```{r}
+#| label: loading-data
+# dado bruto 
+data_penguins <- 
+read.csv(file = here::here("data", "raw", "data_raw_penguins.csv"))
+
+#removendo NAs da tabela
+data_penguins=data_penguins[c(-4,-272,-9,-10,-11,-12,-48,-179,-219,-257,-269),]
+
+summary(data_penguins)
+```
+
+Esses dados foram obtidos a partir do pacote *palmerpenguins* [(Horst et al., 2020)](https://allisonhorst.github.io/palmerpenguins/reference/index.html).
+
+### Subtítulo 2: Figura exploratória
+Esses dados representam medidas de três diferentes espécies de pinguins e podemos checar se existe relação entre o comprimento e a profundidade do bico
+
+```{r}
+library(ggplot2)
+graph_first <- ggplot(data = data_penguins,
+       mapping = aes(x = bill_length_mm, y = bill_depth_mm, color = species))+
+  geom_point()+
+  theme_classic(base_size = 18) +
+  geom_smooth(method = "lm") +
+  labs(x= "Bill length (mm)", y = "Bill depth (mm)")
+
+graph_first
+```
+
+
