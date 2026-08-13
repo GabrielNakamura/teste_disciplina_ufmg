@@ -1,8 +1,9 @@
 ---
-title: "Teste disciplina Reprodutibilidade Computacional"
+title: "Manuscript: Teste disciplina Reprodutibilidade Computacional 🍂"
 format: html
 editor: visual
 date: 2026-08-13
+author: "Victor H. D. Silva"
 theme: journal
 ---
 
@@ -10,10 +11,9 @@ theme: journal
 
 ## Subtitítulo 1: Carregando meus dados de pinguins
 
-Neste exemplo, estamos criando um arquivo **html** usando quarto. Para isso estamos usando os dados do pacote palmerpenguins. Além disso, removemos as linhas com NA.
+tEXTO: Neste exemplo, estamos criando um arquivo **html** usando quarto. Para isso estamos usando os dados do pacote palmerpenguins. Além disso, removemos as linhas com NA.
 
 ```{r}
-#| label: loading-data
 # dado bruto 
 data_penguins <- 
 read.csv(file = here::here("data", "raw", "data_raw_penguins.csv"))
@@ -24,12 +24,13 @@ data_penguins=data_penguins[c(-4,-272,-9,-10,-11,-12,-48,-179,-219,-257,-269),]
 summary(data_penguins)
 ```
 
-Esses dados foram obtidos a partir do pacote *palmerpenguins* [(Horst et al., 2020)](https://allisonhorst.github.io/palmerpenguins/reference/index.html).
+TEXTO: Esses dados foram obtidos a partir do pacote *palmerpenguins* [(Horst et al., 2020)](https://allisonhorst.github.io/palmerpenguins/reference/index.html).
 
 ### Subtítulo 2: Figura exploratória
-Esses dados representam medidas de três diferentes espécies de pinguins e podemos checar se existe relação entre o comprimento e a profundidade do bico
 
-```{r}
+Texto: Esses dados representam medidas de três diferentes espécies de pinguins e podemos checar se existe relação entre o comprimento e a profundidade do bico, como visto na @Fig-1
+
+```{r Fig-1}
 library(ggplot2)
 graph_first <- ggplot(data = data_penguins,
        mapping = aes(x = bill_length_mm, y = bill_depth_mm, color = species))+
@@ -40,5 +41,3 @@ graph_first <- ggplot(data = data_penguins,
 
 graph_first
 ```
-
-
