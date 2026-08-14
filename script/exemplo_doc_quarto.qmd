@@ -17,18 +17,13 @@ bibliography: bibliography_ciencia_aberta.bib
 
 # Introdução
 
-
 # Métodos
 
 Exemplo de citação de uma referência @kowaltowskiOpenAccessBrazilian2022
 
-
 ## Modelos
 
-Dentro da seção de modelo que está dentro de métodos
- [Vou colocar aqui um link](https://rpubs.com/drgregmartin/1266674)
- 
- 
+Dentro da seção de modelo que está dentro de métodos [Vou colocar aqui um link](https://rpubs.com/drgregmartin/1266674)
 
 ```{r echo=TRUE, eval=TRUE}
 #| label: exemplo
@@ -38,7 +33,6 @@ plot(rnorm(10), rnorm(10))
 ```
 
 Descrevendo os meu métodos e lembrei que quero falar da figura que está lá em cima @exemplo
-
 
 ## Dados
 
@@ -51,8 +45,9 @@ Quarto enables you to weave together content and executable code into a finished
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
 
 ```{r}
-1 + 1
+df_simples <- data.frame(B = c(1, 2, 3, 4), A = c(1, 2, 3, 4))
 ```
+Minhas amostragens tiveram `r df_simples`
 
 You can add options to executable code like this
 
@@ -62,6 +57,3 @@ You can add options to executable code like this
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
-
-
-

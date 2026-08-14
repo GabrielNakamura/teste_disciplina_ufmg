@@ -1,0 +1,40 @@
+---
+title: "Gráfico de dispersão usando um doc dinâmico"
+format: html
+editor: visual
+---
+
+# Contexto
+
+Nesse documento mostraremos como podemos plotar o tamanho do bico contra 
+   profundidade do bico
+    
+Primeiro vamos ler os dados dos pinguins
+
+```{r}
+data_penguins <- 
+  read.csv(file = here::here("data", "raw", "data_raw_penguins.csv"))
+```
+
+# Plotando os gráficos de tamanho de bico
+
+Agora vamos plotar um gráfico de dispersão 
+
+```{r echo=TRUE,eval=TRUE}
+
+penguins <- data_penguins
+library(ggplot2)
+
+graph_first <- ggplot(data = penguins,
+       mapping = aes(x = bill_length_mm, y = bill_depth_mm, color = species))+
+  geom_point()+
+  theme_classic(base_size = 18) +
+  geom_smooth(method = "lm") +
+  labs(x= "Bill length (mm)", y = "Bill depth (mm)")
+
+graph_first
+
+```
+
+
+

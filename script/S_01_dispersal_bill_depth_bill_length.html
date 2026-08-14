@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Exemplo de montagem</title>
+<title>Gráfico de dispersão usando um doc dinâmico</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,40 +55,20 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
-<script src="exemplo_doc_quarto_files/libs/clipboard/clipboard.min.js"></script>
-<script src="exemplo_doc_quarto_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="exemplo_doc_quarto_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="exemplo_doc_quarto_files/libs/quarto-html/popper.min.js"></script>
-<script src="exemplo_doc_quarto_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="exemplo_doc_quarto_files/libs/quarto-html/anchor.min.js"></script>
-<link href="exemplo_doc_quarto_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="exemplo_doc_quarto_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="exemplo_doc_quarto_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="exemplo_doc_quarto_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="exemplo_doc_quarto_files/libs/bootstrap/bootstrap-81267100e462c21b3d6c0d5bf76a3417.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="S_01_dispersal_bill_depth_bill_length_files/libs/clipboard/clipboard.min.js"></script>
+<script src="S_01_dispersal_bill_depth_bill_length_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="S_01_dispersal_bill_depth_bill_length_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="S_01_dispersal_bill_depth_bill_length_files/libs/quarto-html/popper.min.js"></script>
+<script src="S_01_dispersal_bill_depth_bill_length_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="S_01_dispersal_bill_depth_bill_length_files/libs/quarto-html/anchor.min.js"></script>
+<link href="S_01_dispersal_bill_depth_bill_length_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="S_01_dispersal_bill_depth_bill_length_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="S_01_dispersal_bill_depth_bill_length_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="S_01_dispersal_bill_depth_bill_length_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="S_01_dispersal_bill_depth_bill_length_files/libs/bootstrap/bootstrap-81267100e462c21b3d6c0d5bf76a3417.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -101,7 +81,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Exemplo de montagem</h1>
+<h1 class="title">Gráfico de dispersão usando um doc dinâmico</h1>
 </div>
 
 
@@ -118,77 +98,54 @@ div.csl-indent {
 </header>
 
 
-<section id="cabeçalho-principal" class="level1">
-<h1>Cabeçalho principal</h1>
-<section id="subtitulo-do-titulo-principal" class="level2">
-<h2 class="anchored" data-anchor-id="subtitulo-do-titulo-principal">Subtitulo do titulo principal</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">….</h3>
-</section>
-</section>
-<section id="quarto" class="level2">
-<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
-</section>
-</section>
-<section id="outro-titulo" class="level1">
-<h1>Outro titulo</h1>
-</section>
-<section id="introdução" class="level1">
-<h1>Introdução</h1>
-</section>
-<section id="métodos" class="level1">
-<h1>Métodos</h1>
-<p>Exemplo de citação de uma referência <span class="citation" data-cites="kowaltowskiOpenAccessBrazilian2022">Kowaltowski, Naslavsky, and Zatz (<a href="#ref-kowaltowskiOpenAccessBrazilian2022" role="doc-biblioref">2022</a>)</span></p>
-<section id="modelos" class="level2">
-<h2 class="anchored" data-anchor-id="modelos">Modelos</h2>
-<p>Dentro da seção de modelo que está dentro de métodos <a href="https://rpubs.com/drgregmartin/1266674">Vou colocar aqui um link</a></p>
+<section id="contexto" class="level1">
+<h1>Contexto</h1>
+<p>Nesse documento mostraremos como podemos plotar o tamanho do bico contra profundidade do bico</p>
+<p>Primeiro vamos ler os dados dos pinguins</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>soma_1_1 <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>soma_1_1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data_penguins <span class="ot">&lt;-</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read.csv</span>(<span class="at">file =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"raw"</span>, <span class="st">"data_raw_penguins.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>), <span class="fu">rnorm</span>(<span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="plotando-os-gráficos-de-tamanho-de-bico" class="level1">
+<h1>Plotando os gráficos de tamanho de bico</h1>
+<p>Agora vamos plotar um gráfico de dispersão</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="ot">&lt;-</span> data_penguins</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.4.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>graph_first <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm, <span class="at">color =</span> species))<span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">18</span>) <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span> <span class="st">"Bill length (mm)"</span>, <span class="at">y =</span> <span class="st">"Bill depth (mm)"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>graph_first</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="exemplo_doc_quarto_files/figure-html/exemplo-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="S_01_dispersal_bill_depth_bill_length_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Descrevendo os meu métodos e lembrei que quero falar da figura que está lá em cima <span class="citation" data-cites="exemplo">(<a href="#ref-exemplo" role="doc-biblioref"><strong>exemplo?</strong></a>)</span></p>
-</section>
-<section id="dados" class="level2">
-<h2 class="anchored" data-anchor-id="dados">Dados</h2>
-</section>
-</section>
-<section id="discussão" class="level1">
-<h1>Discussão</h1>
-<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
-<section id="running-code" class="level2">
-<h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>vetor_simples <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Minhas amostragens tiveram 1, 2, 3, 4</p>
-<p>You can add options to executable code like this</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
-</div>
-</div>
-<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
-
-</section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-kowaltowskiOpenAccessBrazilian2022" class="csl-entry" role="listitem">
-Kowaltowski, Alicia, Michel Naslavsky, and Mayana Zatz. 2022. <span>“Open Access: <span>Brazilian</span> Scientists Denied Waivers and Discounts.”</span> <em>Nature</em> 603 (7903): 793–93. <a href="https://doi.org/10.1038/d41586-022-00864-3">https://doi.org/10.1038/d41586-022-00864-3</a>.
-</div>
-</div></section></div></main>
+</main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
