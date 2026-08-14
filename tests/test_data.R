@@ -1,6 +1,6 @@
 # Leitura de dados
 penguins <- read.csv(
-  "data/raw/data_raw_penguins.csv"
+  "data/raw/data_raw_penguins.csv", sep = ";"
 )
 
 # Colunas que precisam existir
