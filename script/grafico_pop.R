@@ -1,6 +1,6 @@
 # dado bruto 
 data_penguins <- 
-read.csv(file = here::here("data", "raw", "data_raw_penguins.csv"))
+  read.csv(file = here::here("data", "raw", "data_raw_penguins.csv"))
 
 #removendo NAs da tabela
 data_penguins=data_penguins[c(-4,-272,-9,-10,-11,-12,-48,-179,-219,-257,-269),]

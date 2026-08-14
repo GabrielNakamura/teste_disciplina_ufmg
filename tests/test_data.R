@@ -3,6 +3,47 @@ penguins <- read.csv(
   "data/raw/data_raw_penguins.csv", sep = ";"
 )
 
+# Cria uma pasta para processados
+
+dir.create(
+  "data/processed",
+  showWarnings = FALSE,
+  recursive = TRUE
+)
+
+# check validação 
+
+
+# validação body mass -----------------------------------------------------
+
+penguins$body_mass_flag <- ifelse(
+  is.na(penguins$body_mass_g) |
+    penguins$body_mass_g >= 0,
+  "OK",
+  "CHECK"
+)
+
+
+
+# validação do flipper ----------------------------------------------------
+
+penguins$flipper_flag <- ifelse(
+  is.na(penguins$flipper_length_mm) |
+    penguins$flipper_length_mm >= 0,
+  "OK",
+  "CHECK"
+)
+
+
+
+# salva tabela de valores processado --------------------------------------
+write.csv(
+  penguins,
+  "data/processed/data_checked_penguins.csv",
+  row.names = FALSE
+)
+
+
 # Colunas que precisam existir
 expected_columns <- c(
   "species",
@@ -66,6 +107,20 @@ stopifnot(
 stopifnot(
   all(
     na.omit(penguins$sex) %in% c("male", "female")
+  )
+)
+
+# Teste 9: nome das especies esperado
+
+expected_species <- c(
+  "Adelie",
+  "Chinstrap",
+  "Gentoo"
+)
+
+stopifnot(
+  all(
+    na.omit(penguins$species) %in% expected_species
   )
 )
 
